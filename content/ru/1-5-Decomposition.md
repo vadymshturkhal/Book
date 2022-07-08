@@ -5,6 +5,7 @@
 Рассмотрим алгоритм поиска знака последовательности. Знак последовательности равен -1 в степени количества инверсий последовательности.
 
 Пример на `Python`:
+
 ```py
 def sign_of_sequence(sequence):
     inversions_quantity = 0
@@ -17,6 +18,7 @@ def sign_of_sequence(sequence):
 ```
 
 Пример на `JavaScript`:
+
 ```js
 const signOfSequence = (sequence) => {
   let inversionsQuantity = 0;
@@ -34,6 +36,7 @@ const signOfSequence = (sequence) => {
 Для того, чтобы решить задачу вычисления знака последовательности, необходимо решить задачу вычисления количества инверсий последовательности. Вынесем подсчёт количества инверсий в отдельную функцию:
 
 Пример на `Python`:
+
 ```py
 def count_inversions(sequence):
     inversions_quantity = 0
@@ -45,6 +48,7 @@ def count_inversions(sequence):
 ```
 
 Пример на `JavaScript`:
+
 ```js
 const countInversions = (sequence) => {
   let inversionsQuantity = 0;
@@ -62,12 +66,14 @@ const countInversions = (sequence) => {
 Теперь функция поиска знака последовательности имеет вид:
 
 Пример на `Python`:
+
 ```py
 def sign_of_sequence_decomposed(sequence):
     return (-1) ** count_inversions(sequence)
 ```
 
 Пример на `JavaScript`:
+
 ```js
 const signOfSequence = (sequence) => {
   return (-1) ** countInversions(sequence);
@@ -77,6 +83,7 @@ const signOfSequence = (sequence) => {
 Декомпозированная функция выглядит следующим образом:
 
 Пример на `Python`:
+
 ```py
 def sign_of_sequence_decomposed(sequence):
     return (-1) ** count_inversions(sequence)
@@ -91,6 +98,7 @@ def count_inversions(sequence):
 ```
 
 Пример на `JavaScript`:
+
 ```js
 const countInversions = (sequence) => {
   let inversionsQuantity = 0;
@@ -103,7 +111,6 @@ const countInversions = (sequence) => {
   }
   return inversionsQuantity;
 };
-
 
 const signOfSequence = (sequence) => {
   return (-1) ** countInversions(sequence);
