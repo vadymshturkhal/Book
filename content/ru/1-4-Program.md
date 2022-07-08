@@ -4,19 +4,28 @@
 
 > Алгоритм (Algorithm) — это формальное описание порядка вычислений для определенного класса задач за конечное время.
 
-На `JavaScript` нахождение наибольшего общего делителя (или общей меры) можно написать так:
+Покажем пример нахождение наибольшего общего делителя (или общей меры).
+
+На `JavaScript`:
 
 ```js
-const gcd = (a, b) => {
-  if (b === 0) return a;
-  return gcd(b, a % b);
+const grandCommonDivisor = (firstNum, secondNum) => {
+  if (secondNum === 0) return firstNum;
+  return grandCommonDivisor(
+    secondNum,
+    firstNum % secondNum
+  );
 };
 ```
 
-Или даже короче, но менее привычно:
+На `Python`:
 
-```js
-const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+```py
+def grand_common_divisor(first_num, second_num):
+    if second_num == 0:
+        return first_num
+
+    return grand_common_divisor(second_num, first_num % second_num)
 ```
 
 Этот простой алгоритм является рекурсивным, т.е. обращается к самому себе для вычисления следующего шага и предусматривает выход, когда `b` доходит до `0`. Для алгоритмов мы можем определять вычислительную сложность, классифицировать их по ресурсам времени и памяти, необходимым для решения задачи.
