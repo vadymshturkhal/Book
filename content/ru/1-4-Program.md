@@ -25,7 +25,10 @@ def grand_common_divisor(first_num, second_num):
     if second_num == 0:
         return first_num
 
-    return grand_common_divisor(second_num, first_num % second_num)
+    return grand_common_divisor(
+        second_num,
+        first_num % second_num
+    )
 ```
 
 Этот простой алгоритм является рекурсивным, т.е. обращается к самому себе для вычисления следующего шага и предусматривает выход, когда `b` доходит до `0`. Для алгоритмов мы можем определять вычислительную сложность, классифицировать их по ресурсам времени и памяти, необходимым для решения задачи.
