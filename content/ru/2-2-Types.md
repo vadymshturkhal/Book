@@ -85,12 +85,12 @@ word = 'Hello'
 
 ```js
 const word = 'Hello';
-word[1]  // e
+console.log(word[1]); // e
 ```
 
 Пример на `Python`:
 
 ```py
 word = 'Hello'
-word[1]  # e
+print(word[1])  # e
 ```
