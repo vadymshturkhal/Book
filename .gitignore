@@ -1,3 +1,6 @@
 node_modules
 *.log
 .DS_Store
+TODO.txt
+py_test.py
+js_test.js

@@ -10,7 +10,10 @@
 
 ```js
 const grandCommonDivisor = (firstNum, secondNum) => {
-  if (secondNum === 0) return firstNum;
+  if (secondNum === 0) {
+    return firstNum;
+  }
+
   return grandCommonDivisor(
     secondNum,
     firstNum % secondNum
