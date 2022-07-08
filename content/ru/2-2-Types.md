@@ -13,7 +13,7 @@ const types = values.map((x) => typeof x);
 console.log({ types });
 ```
 
-> Скаляр (Scalar, Primitive, Atomic value) — значение примитивного типа данных.
+> Скаляр (Scalar, Primitive, Atomic value) — значение примитивного типа данных. Например число, булеан.
 
 Скаляр копируется при присвоении и передается в функцию по значению.
 
