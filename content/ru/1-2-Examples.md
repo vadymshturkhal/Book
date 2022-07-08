@@ -8,7 +8,7 @@
 let first_num = 2;
 let secord_num = 3;
 let sum = firstNum + secondNum;
-console.log({ sum });
+console.log('sum', sum);
 ```
 
 Попробуйте понять, что тут написано и в чем могут быть ошибки. А потом сравните этот код с его переводом на `C`.
@@ -30,7 +30,7 @@ int main() {
 first_num = 2
 secord_num = 3
 sum = firstNum + secondNum
-print({ 'sum': sum })
+print('sum', sum)
 ```
 
 Дальше мы будем часто сравнивать примеры кода на разных языках, искать и исправлять ошибки, оптимизировать код, улучшая в первую очередь его читаемость и понятность.
