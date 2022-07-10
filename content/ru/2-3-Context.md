@@ -3,31 +3,29 @@
 > Область видимости (Scope) — часть кода, из которой "виден" идентификатор.
 
 ```js
-const level = 1;
-
-const f = () => {
-  const level = 2;
+const showScope = () => {
+  const level = 1;
   {
-    const level = 3;
-    console.log(level); // 3
+    const level = 2;
+    console.log(level); // 2
   }
-  console.log(level); // 2
+  console.log(level); // 1
 };
+
+showScope();
 ```
 
 В современном стандарте `JavaScript` область видимости порождается функцией или любым блоком операторов, имеющим фигурные скобки `{}` или операторами ветвления и циклов, в которых могут быть блоки, но скобки `{}` могут и опускаться. В `Python` scope порождается только функциями. Сравните этот код с предыдущим примером:
 
 ```py
-level = 1
+def show_scope():
+    level = 1
+    if level == 1:
+        level = 2
+        print(level)  # 2
+    print(level)  # 2
 
-def f():
-  level = 2
-  if level == 2:
-    level = 3
-    print(level) // 3
-  print(level) // 3
-
-f()
+show_scope()
 ```
 
 > Лексический контекст (Lexical environment) — набор идентификаторов, связанных с определенными значениями в рамках функции или блока кода (в том числе блоков циклов, условий и т.д.).
