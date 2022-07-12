@@ -33,13 +33,16 @@ console.log(functionScope); // Ошибка. Значение functionScope не
 Пример на `Python`:
 
 ```py
-level = 1
-print(level)  # 1
+global_scope = 1
 
 def show_scope():
-    print(level)  # 1
+    function_scope = 2
+    print(global_scope)  # 1
+    print(function_scope)  # 2
 
 show_scope()
+print(global_scope)  # 1
+print(function_scope)  #  Ошибка. Имя function_scope не определёно
 ```
 
 > Лексический контекст (Lexical environment) — набор идентификаторов, связанных с определенными значениями в рамках функции или блока кода (в том числе блоков циклов, условий и т.д.).
