@@ -7,18 +7,25 @@
 Пример на `JavaScript`:
 
 ```js
-const level = 1;
-console.log(level); // 1
+const globalScope = 1;
 
 {
-  console.log(level); // 1
+  const bracesScope = 2;
+  console.log(globalScope); // 1
+  console.log(bracesScope); // 2
 }
 
 const showScope = () => {
-  console.log(level); // 1
+  const functionScope = 3;
+  console.log(globalScope); // 1
+  console.log(functionScope); // 3
 };
 
 showScope();
+
+console.log(globalScope); // 1
+console.log(bracesScope); // Ошибка. Значение bracesScope не определено
+console.log(functionScope); // Ошибка. Значение functionScope не определено
 ```
 
 В `Python` scope порождается только функциями.
